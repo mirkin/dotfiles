@@ -4,6 +4,9 @@ set nowrap " don't wrap on load
 set fo-=t " dont's wrap while typing
 set colorcolumn=80 "dont want over 79 so show the width
 highlight ColorColumn ctermbg=233 " color of ColorColumn overwritten by ColorScheme though
+"on mac
+set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
+"on linux
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
@@ -53,7 +56,8 @@ set mat=2
 
 vnoremap < <gv " keeps selection when indent and outdent
 vnoremap > >gv
-
+map <Enter> o<ESC>
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Handling 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
