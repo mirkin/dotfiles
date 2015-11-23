@@ -57,6 +57,16 @@ set mat=2
 vnoremap < <gv " keeps selection when indent and outdent
 vnoremap > >gv
 map <Enter> o<ESC>
+"toggle relative number mode
+function! NumberToggle()
+	if(&relativenumber == 1)
+		set norelativenumber
+		else
+		set relativenumber
+	endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Handling 
