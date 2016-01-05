@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/alex/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 #autojump
 . /usr/share/autojump/autojump.zsh
 #start tmux in 256 colour
