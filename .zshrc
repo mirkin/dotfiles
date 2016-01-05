@@ -4,6 +4,8 @@ export ZSH=/home/alex/.oh-my-zsh
 . /usr/share/autojump/autojump.zsh
 #start tmux in 256 colour
 alias tmux="tmux -2"
+#vi style commands to edit shell
+set -o vi
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -52,7 +54,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jump)
+plugins=(git jump sudo)
 
 # User configuration
 

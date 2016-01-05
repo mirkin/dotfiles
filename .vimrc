@@ -19,6 +19,17 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Coding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" visual spaces per tab
+set tabstop=4
+" spaces per tab while editing
+set softtabstop=4
+" use spaces for tabs
+set expandtab
+" reindent << >>
+set shiftwidth=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
