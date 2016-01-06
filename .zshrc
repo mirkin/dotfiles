@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 #autojump
-. /usr/share/autojump/autojump.zsh
+#. /usr/share/autojump/autojump.zsh
+[[ -s "/usr/share/autojump/autojump.zsh" ]] && source "/usr/share/autojump/autojump.zsh"
 #start tmux in 256 colour
 alias tmux="tmux -2"
 #vi style commands to edit shell
