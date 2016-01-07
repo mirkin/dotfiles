@@ -5,6 +5,7 @@ endif
 " plugins, :PlugInstall in vim commentd mode to install
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 set number "show line numbers
 set tw=79 " width used by gd
