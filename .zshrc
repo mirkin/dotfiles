@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 #autojump
 #. /usr/share/autojump/autojump.zsh
+#autojump for linux
 [[ -s "/usr/share/autojump/autojump.zsh" ]] && source "/usr/share/autojump/autojump.zsh"
 #start tmux in 256 colour
 alias tmux="tmux -2"

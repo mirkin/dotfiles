@@ -1,3 +1,11 @@
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+        execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+" plugins, :PlugInstall in vim commentd mode to install
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/syntastic'
+call plug#end()
 set number "show line numbers
 set tw=79 " width used by gd
 set nowrap " don't wrap on load
