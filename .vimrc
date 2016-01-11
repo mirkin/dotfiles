@@ -4,6 +4,7 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 endif
 " plugins, :PlugInstall in vim commentd mode to install
 call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
