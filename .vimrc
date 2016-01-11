@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
-Plug 'nathanaekane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 set number "show line numbers
 set tw=79 " width used by gd
