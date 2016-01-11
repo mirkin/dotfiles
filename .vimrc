@@ -32,6 +32,16 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" powerline fonts for airline plugin
+let g:airline_powerline_fonts=1
+" at least 2 buffers before top bar is used
+let g:airline#extensions#tabline#buffer_min_count = 2
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = "badwolf"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " visual spaces per tab
@@ -143,7 +153,7 @@ map <silent> <leader><cr> :noh<cr>
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 au FileType py set smartindent
 set modeline
