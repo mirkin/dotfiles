@@ -52,6 +52,11 @@ set softtabstop=4
 set expandtab
 " reindent << >>
 set shiftwidth=4
+" save view and reload handy to restore folding
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
+"folding
+set foldmethod=syntax
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
