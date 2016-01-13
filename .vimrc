@@ -57,6 +57,10 @@ au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
 "folding
 set foldmethod=syntax
+"js reformat
+noremap <leader>fj :%!js-beautify -f - -w 80 --type js
+"html reformat
+noremap <leader>fh :%!js-beautify -f - --type html
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
