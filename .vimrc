@@ -2,13 +2,22 @@
 if empty(glob("~/.vim/autoload/plug.vim"))
         execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
+"source .vimrc if changed
+augroup reload_vimrc " {
+        autocmd!
+        autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
 " plugins, :PlugInstall in vim commentd mode to install
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
+"syntax checker
 Plug 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlpctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'nathanaelkane/vim-indent-guides'
+"auto closing quotes parens etc.
+Plug 'Raimondi/delimitMate'
 call plug#end()
 set number "show line numbers
 set tw=79 " width used by gd
@@ -20,7 +29,6 @@ highlight ColorColumn ctermbg=233 " color of ColorColumn overwritten by ColorSch
 set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
 "on linux
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-set laststatus=2
 set t_Co=256
 set title
 set showmode
@@ -61,6 +69,9 @@ set foldmethod=syntax
 noremap <leader>fj :%!js-beautify -f - -w 80 --type js
 "html reformat
 noremap <leader>fh :%!js-beautify -f - --type html
+" enable delimit mate plugin to expand spaces and cr
+let delimitMate_expand_space=1
+let delimitMate_expand_cr=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
