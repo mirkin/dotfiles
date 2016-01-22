@@ -76,6 +76,7 @@ let delimitMate_expand_cr=1
 "tags=./tags,tags
 "tags+=tags;$HOME search tags recursively from current folder to home dir ~
 set tags+=tags;$HOME
+noremap <leader>ct :!ctags -R
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
