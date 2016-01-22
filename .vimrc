@@ -74,6 +74,8 @@ let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
 " ctags for <ctrl-]> etc where to find the tags file
 "tags=./tags,tags
+"tags+=tags;$HOME search tags recursively from current folder to home dir ~
+set tags+=tags;$HOME
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
