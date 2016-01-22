@@ -72,6 +72,8 @@ noremap <leader>fh :%!js-beautify -f - --type html
 " enable delimit mate plugin to expand spaces and cr
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
+" ctags for <ctrl-]> etc where to find the tags file
+"tags=./tags,tags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
