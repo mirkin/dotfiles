@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 "syntax checker
 Plug 'scrooloose/syntastic'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'nathanaelkane/vim-indent-guides'
