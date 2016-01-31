@@ -12,12 +12,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 "syntax checker
 Plug 'scrooloose/syntastic'
-Plug 'ctrlpvim/ctrlpctrlp.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'nathanaelkane/vim-indent-guides'
 "auto closing quotes parens etc.
 Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
 call plug#end()
 set number "show line numbers
 set tw=79 " width used by gd
@@ -91,6 +93,7 @@ let delimitMate_expand_cr=1
 "tags+=tags;$HOME search tags recursively from current folder to home dir ~
 set tags+=tags;$HOME
 noremap <leader>ct :!ctags -R
+noremap <leader>tb :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
