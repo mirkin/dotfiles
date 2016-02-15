@@ -13,6 +13,7 @@ Plug 'bling/vim-airline'
 "syntax checker
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_custom_ignore='node_modules\|DS_Store|.git\'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'nathanaelkane/vim-indent-guides'
