@@ -9,7 +9,9 @@ augroup reload_vimrc " {
 augroup END " }
 " plugins, :PlugInstall in vim commentd mode to install
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "syntax checker
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
