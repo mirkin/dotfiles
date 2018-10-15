@@ -8,7 +8,8 @@ case $- in
       *) return;;
 esac
 # set up autojump
-. /usr/share/autojump/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f  /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -59,7 +60,8 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
-    PS1=$'\[\033[38;5;255;48;5;207m${debian_chroot:+($debian_chroot)}\u@\h\[\033[38;5;207;48;5;33m\]\ue0b0 \[\033[38;5;255m\]\w \$ \[\033[00m\]\[\033[38;5;33m\ue0b0\[\033[00m\] '
+    #PS1=$'\[\033[38;5;255;48;5;207m${debian_chroot:+($debian_chroot)}\u@\h\[\033[38;5;207;48;5;33m\]\ue0b0 \[\033[38;5;255m\]\w \$ \[\033[00m\]\[\033[38;5;33m\ue0b0\[\033[00m\] '
+    PS1=$'\[\033[38;5;255;48;5;207m${debian_chroot:+($debian_chroot)}\u@\h\[\033[38;5;207;48;5;33m\]\[\033[38;5;255m\]\w \$ \[\033[00m\]\[\033[38;5;33m\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

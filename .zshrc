@@ -6,8 +6,6 @@ export ZSH=$HOME/.oh-my-zsh
 [[ -s "/usr/share/autojump/autojump.zsh" ]] && source "/usr/share/autojump/autojump.zsh"
 #start tmux in 256 colour
 alias tmux="tmux -2"
-#vi style commands to edit shell
-set -o vi
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -61,7 +59,10 @@ plugins=(autojump sudo)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/Users/alex/dev/connectiq/bin"
+# add anaconda to the path
+export PATH=/Users/alex/anaconda3/bin:$PATH
+export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,3 +91,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#vi style commands to edit shell
+set -o vi
+bindkey -v
+#reduce the ESC lag from 0.4 sec to 0.1
+export KEYTIMEOUT=1
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+# define right prompt, if it wasn't defined by a theme
+if [[ "$RPS1" == "" && "$RPROMPT" == "" ]]; then
+  RPS1='$(vi_mode_prompt_info)'
+fi
